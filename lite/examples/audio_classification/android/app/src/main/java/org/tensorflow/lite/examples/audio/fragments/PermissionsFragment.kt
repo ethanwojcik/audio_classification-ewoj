@@ -36,6 +36,8 @@ private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.RECORD_AUDIO)
  */
 class PermissionsFragment : Fragment() {
 
+
+
     val requestPermissionLauncher =
         registerForActivityResult(
             ActivityResultContracts.RequestPermission()
