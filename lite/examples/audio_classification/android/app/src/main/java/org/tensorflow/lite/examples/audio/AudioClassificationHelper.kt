@@ -29,8 +29,8 @@ import org.tensorflow.lite.task.core.BaseOptions
 
 class AudioClassificationHelper(
   val context: Context,
-  val listener: AudioClassificationListener,
   var currentModel: String = YAMNET_MODEL,
+  val listener: AudioClassificationListener,
   var classificationThreshold: Float = DISPLAY_THRESHOLD,
   var overlap: Float = DEFAULT_OVERLAP_VALUE,
   var numOfResults: Int = DEFAULT_NUM_OF_RESULTS,
@@ -131,9 +131,9 @@ class AudioClassificationHelper(
         const val DELEGATE_CPU = 0
         const val DELEGATE_NNAPI = 1
         const val DISPLAY_THRESHOLD = 0.3f
-        const val DEFAULT_NUM_OF_RESULTS = 2
+        const val DEFAULT_NUM_OF_RESULTS = 5
         const val DEFAULT_OVERLAP_VALUE = 0.5f
-        const val YAMNET_MODEL = "yamnet.tflite"
+        const val YAMNET_MODEL = "my_cnn_model.tflite"
         const val SPEECH_COMMAND_MODEL = "speech.tflite"
     }
 }
